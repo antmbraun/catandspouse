@@ -172,21 +172,27 @@ p {
 
 #services-grid {
 	display: flex;
-  justify-content: space-around;
-  max-width: 80em;
-  margin:auto;
+  justify-content: space-evenly;
+  // max-width: 80em;
+  // margin:auto;
+  flex-wrap:wrap;
   /*align-items: stretch;*/
 }
 
 .cell {
 	/*min-height: 400px;*/
 	background: #77a6c3;
-  max-width: 28%;
+  max-width: 400px;
 	/*flex: 3;*/
   flex-grow: 1;
+  flex-basis: 400px;
   /*margin:auto;*/
-  padding: 1em 1em;
+  margin: 1em;
 	/*margin-right:20px;*/
+
+  figure {
+    margin: 1.5em;
+  }
 }
 
 .price {
