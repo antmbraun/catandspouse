@@ -11,6 +11,10 @@ p {
   margin: auto;
 }
 
+img {
+  max-height: 100vh;
+}
+
 #roof {
 	height: 7vh;
 	background-color: #2c698e;
@@ -21,43 +25,43 @@ p {
 
 #main-menu {
 
+display:flex;
+align-items:right;
+flex-direction: column;
+position: absolute;
+// top: 3em;
+right: 0;
+/*background: teal;*/
+height: auto;
+width: 100%;
+content: "X";
+
+
+a {
+  color: white;
+  text-decoration: none;
+  padding: .5em;
+  border-radius: 5em;
+  &:hover {
+    background-color:gray;
+  }
+}
+
+@media (min-width: 780px ) {
+
+    height: 100%;
+    background-color: #2c698e;
     display:flex;
-    align-items:right;
-    flex-direction: column;
-    position: absolute;
+    flex-direction: row;
+    position: fixed;
     // top: 3em;
-    right: 0;
+    // right: 0;
     /*background: teal;*/
     height: auto;
     width: 100%;
-    content: "X";
-  
-
-    a {
-      color: white;
-      text-decoration: none;
-      padding: .5em;
-      border-radius: 5em;
-      &:hover {
-        background-color:gray;
-      }
-    }
-
-  @media (min-width: 780px ) {
-
-      height: 100%;
-      background-color: #2c698e;
-      display:flex;
-      flex-direction: row;
-      position: fixed;
-      // top: 3em;
-      // right: 0;
-      /*background: teal;*/
-      height: auto;
-      width: 100%;
-      justify-content: flex-end;
-      // align-items: center;
-      margin: 0;
+    justify-content: flex-end;
+    // align-items: center;
+    margin: 0;
       padding: 1em;
     
   }
@@ -306,5 +310,49 @@ img, video {
 
   #mobile-menu {
     display: block;
+  }
+}
+
+ #chevron {
+      position: absolute;
+      // text-align: center;
+      // padding: 12px;
+      // margin-bottom: 6px;
+      right: 5%;
+      // bottom: 10px;
+      height: 60px;
+      width: 10%;
+      animation: bounce 5s infinite;
+    }
+    #chevron:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 50%;
+      width: 50%;
+      background: white;
+      transform: skew(0deg, 18deg);
+    }
+    #chevron:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 50%;
+      width: 50%;
+      background: white;
+      transform: skew(0deg, -18deg);
+    }
+
+    @keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
   }
 }
