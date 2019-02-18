@@ -7,7 +7,9 @@ body {
 }
 
 p {
-  max-width: 40em;
+  max-width: 42em;
+  line-height: 2em;
+  letter-spacing: .2px;
   margin: auto;
 }
 
@@ -88,7 +90,7 @@ a {
   display: flex;
   /*flex-direction: column;*/
   align-items: flex-end;
-	height: 100vh;
+	height: 95vh;
   /*overflow: hidden;*/
   width: 100%;
 	/*position: absolute;*/
@@ -102,16 +104,16 @@ a {
      -o-animation: fadein 2s; /* Opera < 12.1 */
         animation: fadein 2s;
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-image: linear-gradient(to bottom, rgba(255,0,0,0), black);
-    opacity: .7; 
-  }
+  // &:before {
+  //   content: '';
+  //   position: absolute;
+  //   top: 0;
+  //   right: 0;
+  //   bottom: 0;
+  //   left: 0;
+  //   // background-image: linear-gradient(to bottom, rgba(255,0,0,0), black);
+  //   // opacity: .7; 
+  // }
 }
 
 
@@ -318,14 +320,11 @@ img, video {
 
  #chevron {
       position: absolute;
-      // text-align: center;
-      // padding: 12px;
-      // margin-bottom: 6px;
       right: 5%;
-      // bottom: 10px;
       height: 60px;
       width: 10%;
       animation: bounce 5s infinite;
+      cursor: pointer;
     }
     #chevron:before {
       content: '';
