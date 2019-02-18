@@ -17,7 +17,7 @@ gulp.task('default', function() {
  /* Process styles */
 gulp.task('styles', function () {
     return gulp
-        .src(['scss/*.scss']) // Find the Sass files
+        .src(['*.scss']) // Find the Sass files
         .pipe(sass.sync().on('error', sass.logError)) // Compile Sass to CSS
         .pipe(autoprefixer({ // Add vendor prefixes to CSS
             browsers: ['last 4 versions'],

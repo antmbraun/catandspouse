@@ -205,10 +205,13 @@ a {
 }
 
 h1 {
-  font-family: Parisienne;
+  font-family: Oswald;
   font-size: calc(9vw + 8px);
   color: white;
-  margin-bottom: calc(-3vw - 4px);
+  margin-bottom: calc(-3vw + 1px);
+  text-transform: uppercase;
+  margin-left: 5%;
+  width: 100%;
 }
 
 h2 {
